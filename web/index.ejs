@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youtube mp3 and mp4 downloader</title>
+    <link rel="stylesheet" href="/assets/css/index.css">
+</head>
+<body>
+    <form action="/download" method="POST" class="main">
+    <div class="mainText">
+<a class="textMain">YouTube mp3 / mp4 downloader</a>
+    </div>
+
+<div class="radio-container">
+    <div class="radio-inputs">
+        <label class="radio">
+          <input type="radio" name="type" value="mp3" id="mp3" checked="">
+          <span class="name">MP3</span>
+        </label>
+        <label class="radio">
+          <input type="radio" name="type" value="mp4" id="mp4">
+          <span class="name">MP4</span>
+        </label>
+
+      </div>
+</div>
+    <div class="containerinput">
+        <input type="url" name="url" id="url" class="input" placeholder="URL'yi girin" autofocus>
+        <button class="search__btn">
+            <svg xmlns="http://www.w3.org/2000/svg" height="16" width="12" viewBox="0 0 384 512"><path fill="#efeff1" d="M64 0C28.7 0 0 28.7 0 64V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V160H256c-17.7 0-32-14.3-32-32V0H64zM256 0V128H384L256 0zM216 232V334.1l31-31c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-72 72c-9.4 9.4-24.6 9.4-33.9 0l-72-72c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l31 31V232c0-13.3 10.7-24 24-24s24 10.7 24 24z"/></svg>
+        </button>
+      </div>
+    </form>
+</body>
+</html>
