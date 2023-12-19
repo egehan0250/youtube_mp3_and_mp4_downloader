@@ -7,30 +7,88 @@
     <link rel="stylesheet" href="/assets/css/index.css">
 </head>
 <body>
-    <form action="/download" method="POST" class="main">
-    <div class="mainText">
-<a class="textMain">YouTube mp3 / mp4 downloader</a>
+    <form action="/download" method="POST" class="main" id="downloadForm">
+        <div class="mainText">
+            <a class="textMain">YouTube mp3 / mp4 downloader</a>
+        </div>
+
+        <div class="radio-container">
+            <div class="radio-inputs">
+                <label class="radio">
+                  <input type="radio" name="type" value="mp3" id="mp3" checked="">
+                  <span class="name">MP3</span>
+                </label>
+                <label class="radio">
+                  <input type="radio" name="type" value="mp4" id="mp4">
+                  <span class="name">MP4</span>
+                </label>
+            </div>
+        </div>
+        <div class="mainText2">
+          <a class="textMain2">Kalite</a>
+      </div>
+      
+      <div class="radio-container" id="mp4quailty">
+        <div class="radio-inputs" >
+          <label class="radio">
+            <input type="radio" name="quality" value="2" id="mp4_2">
+            <span class="name">En düşük Kalite</span>
+          </label>
+          <label class="radio">
+            <input type="radio" name="quality" value="1" id="mp4_1">
+            <span class="name">En yüksek Kalite</span>
+          </label>
+      </div>
     </div>
 
-<div class="radio-container">
-    <div class="radio-inputs">
-        <label class="radio">
-          <input type="radio" name="type" value="mp3" id="mp3" checked="">
-          <span class="name">MP3</span>
-        </label>
-        <label class="radio">
-          <input type="radio" name="type" value="mp4" id="mp4">
-          <span class="name">MP4</span>
-        </label>
-
-      </div>
-</div>
-    <div class="containerinput">
-        <input type="url" name="url" id="url" class="input" placeholder="URL'yi girin" autofocus>
-        <button class="search__btn">
-            <svg xmlns="http://www.w3.org/2000/svg" height="16" width="12" viewBox="0 0 384 512"><path fill="#efeff1" d="M64 0C28.7 0 0 28.7 0 64V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V160H256c-17.7 0-32-14.3-32-32V0H64zM256 0V128H384L256 0zM216 232V334.1l31-31c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-72 72c-9.4 9.4-24.6 9.4-33.9 0l-72-72c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l31 31V232c0-13.3 10.7-24 24-24s24 10.7 24 24z"/></svg>
-        </button>
-      </div>
+        <div class="containerinput">
+            <input type="url" name="url" id="url" class="input" placeholder="URL'yi girin" autofocus>
+            <button class="search__btn">
+                <svg xmlns="http://www.w3.org/2000/svg" height="16" width="12" viewBox="0 0 384 512"><path fill="#efeff1" d="M64 0C28.7 0 0 28.7 0 64V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V160H256c-17.7 0-32-14.3-32-32V0H64zM256 0V128H384L256 0zM216 232V334.1l31-31c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-72 72c-9.4 9.4-24.6 9.4-33.9 0l-72-72c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l31 31V232c0-13.3 10.7-24 24-24s24 10.7 24 24z"/></svg>
+            </button>
+        </div>
     </form>
+    <script>
+      const form = document.getElementById('downloadForm');
+  
+      form.addEventListener('submit', function (event) {
+          event.preventDefault(); 
+  
+          const selectedType = document.querySelector('input[name="type"]:checked');
+          const selectedQuality = document.querySelector('input[name="quality"]:checked');
+  
+          if (selectedType && selectedQuality) {
+              const formData = {
+                  type: selectedType.value,
+                  quality: selectedQuality.value,
+                  url: form.querySelector('#url').value
+              };
+              form.submit();
+          } else {
+              alert('Lütfen bir tip ve kalite seçin!');
+          }
+      });
+  </script>
+    <script>
+        // JavaScript ile kalite seçeneklerini dinamik olarak değiştirme
+        const mp4Radio = document.getElementById('mp4');
+        const qualityOptions = document.getElementById('qualityOptions');
+        const qualitySelect = document.getElementById('quality');
+        const mp4_1 = document.getElementById('mp4_1');
+        const mp4_2 = document.getElementById('mp4_2');
+
+        // Sayfa yüklendiğinde çağrılır
+        document.addEventListener('DOMContentLoaded', function () {
+            // İlk durum için kalite seçeneklerini göster
+            showQualityOptions();
+        });
+
+        mp4Radio.addEventListener('change', showQualityOptions);
+
+        // Kalite seçeneklerini gösterme işlevi
+        function showQualityOptions() {
+        mp4_1.checked = true;
+        }
+    </script>
 </body>
 </html>
