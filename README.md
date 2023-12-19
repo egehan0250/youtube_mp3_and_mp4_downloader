@@ -1,10 +1,20 @@
 # Youtube mp3 and mp4 Downloader
 Youtube Music and Video Downloader JavaScript
 
-# 🎈 Images 🎈
-![image](https://github.com/egehan0250/youtube_mp3_and_mp4_downloader/assets/79449566/4691df64-6beb-457e-b975-be69a701cb8e)
+# Description
 
-![image](https://github.com/egehan0250/youtube_mp3_and_mp4_downloader/assets/79449566/6ccf4813-6663-4330-b3ab-13fffd3857a6)
+Enjoy the codes you can choose two different quality, high and low, in two different options as mp3 and mp4!
+
+# 🎈 Images 🎈
+
+![image](https://github.com/egehan0250/youtube_mp3_and_mp4_downloader/assets/79449566/361dbc10-af0e-4300-828a-e34e7bf2b400)
+
+![image](https://github.com/egehan0250/youtube_mp3_and_mp4_downloader/assets/79449566/ac8d9cb6-6532-4fa4-88e7-350d2006f4cd)
+
+![image](https://github.com/egehan0250/youtube_mp3_and_mp4_downloader/assets/79449566/2140dc60-827b-49ff-a7b9-fe9367c73222)
+
+![image](https://github.com/egehan0250/youtube_mp3_and_mp4_downloader/assets/79449566/bae58f61-fa0a-4139-a132-ca22a0ace4fe)
+
 
 ---
 - ✨ [For Support](https://github.com/sponsors/egehan0250) <br>
